@@ -29,7 +29,7 @@ module IGeTui
 
     def push_message_to_list(content_id, clients)
       target_list = clients.inject([]) do |list, cilent|
-        list << { 'appId' => app_id, 'clientId' => cilent.client_id }
+        list << { 'appId' => app_id, 'alias' => cilent.client_id }
       end
 
       # seems that we miss 'pushType'
