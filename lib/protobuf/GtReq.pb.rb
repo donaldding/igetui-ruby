@@ -393,7 +393,7 @@ module GtReq
     set_fully_qualified_name "GtReq.Target"
 
     required :string, :appId, 1
-    required :string, :clientId, 2
+    required :string, :alias, 2
   end
 
 end
