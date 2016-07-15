@@ -28,17 +28,18 @@ module IGeTui
     end
 
     def push_message_to_list(content_id, clients)
-      target_list = clients.inject([]) do |list, cilent|
-        list << { 'appId' => app_id, 'alias' => cilent.client_id }
-      end
 
+      alias_list = clients.inject([]) do |list, cilent|
+        list << cilent.client_id
+      end
       # seems that we miss 'pushType'
       data = {
         'action' => 'pushMessageToListAction',
         'appkey' => app_key,
+        'appId' => app_id,
         'contentId' => content_id,
         'needDetails' => true,
-        'targetList' => target_list,
+        'aliasList' => alias_list,
         'type' => 2
       }
 
