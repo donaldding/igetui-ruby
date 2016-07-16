@@ -42,8 +42,8 @@ module IGeTui
         'aliasList' => alias_list,
         'type' => 2
       }
-
-      http_post_json(data)
+      r
+      #http_post_json(data)
     end
 
     def push_message_to_app(message)
