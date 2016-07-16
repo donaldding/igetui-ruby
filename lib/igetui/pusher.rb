@@ -28,9 +28,9 @@ module IGeTui
     end
 
     def push_message_to_list(content_id, clients)
-
+      alias_list = []
       alias_list = clients.inject([]) do |list, cilent|
-        list << cilent.client_id.to_s
+        list << "#{cilent.client_id}"
       end
       # seems that we miss 'pushType'
       data = {
@@ -124,7 +124,6 @@ module IGeTui
         sign: sign
       }
       ret = http_post(data)
-      puts "-----------ret:#{ret}"
       ret['result'] == 'success'
     end
 
