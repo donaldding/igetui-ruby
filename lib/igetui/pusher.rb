@@ -42,7 +42,6 @@ module IGeTui
         'aliasList' => alias_list,
         'type' => 2
       }
-      r
       #http_post_json(data)
     end
 
