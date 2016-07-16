@@ -124,6 +124,7 @@ module IGeTui
         sign: sign
       }
       ret = http_post(data)
+      puts "-----------ret:#{ret}"
       ret['result'] == 'success'
     end
 
