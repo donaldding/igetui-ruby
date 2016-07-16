@@ -30,7 +30,7 @@ module IGeTui
     def push_message_to_list(content_id, clients)
 
       alias_list = clients.inject([]) do |list, cilent|
-        list << cilent.client_id
+        list << cilent.client_id.to_s
       end
       # seems that we miss 'pushType'
       data = {
